@@ -28,6 +28,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 119, 120, 0.29184173669467783) 2%,
+    rgba(30, 228, 196, 0.07055322128851538) 64%,
+    rgba(0, 212, 255, 0.14338235294117652) 100%
+  );
 }
 
 h1 {
