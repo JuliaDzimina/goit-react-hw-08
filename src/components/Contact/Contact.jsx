@@ -4,15 +4,21 @@ import css from "./Contact.module.css";
 const Contact = ({ name, number, id, onDelete }) => {
   return (
     <li className={css.wrapperContact}>
-      <p>
-        <HiUser />
-        {name}
-      </p>
-      <p>
-        <HiPhone />
-        {number}
-      </p>
-      <button onClick={() => onDelete(id)}> Delete</button>
+      <div className={css.contact}>
+        <p className={css.info}>
+          <HiUser />
+          {name}
+        </p>
+        <p className={css.info}>
+          <HiPhone />
+          {number}
+        </p>
+      </div>
+
+      <button className={css.btnDelete} onClick={() => onDelete(id)}>
+        {" "}
+        Delete
+      </button>
     </li>
   );
 };

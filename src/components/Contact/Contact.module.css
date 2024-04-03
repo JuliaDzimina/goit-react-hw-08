@@ -1,4 +1,36 @@
 .wrapperContact {
-  border: 1px solid;
-  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  min-width: 250px;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+.btnDelete {
+  color: white;
+  background-color: #067575;
+  border: 1px solid rgb(5, 87, 71);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.btnDelete:hover,
+.btnDelete:focus {
+  background-color: #7d0f0f;
+  border-color: rgb(59, 6, 6);
 }

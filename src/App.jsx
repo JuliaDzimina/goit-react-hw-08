@@ -36,7 +36,7 @@ function App() {
   };
 
   const filteredContact = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(search.toLowerCase())
+    contact.name.toLowerCase().includes(search.toLowerCase().trim())
   );
 
   return (
