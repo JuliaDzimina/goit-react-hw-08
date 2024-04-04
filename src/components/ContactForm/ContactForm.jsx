@@ -9,10 +9,6 @@ const ContactFormShema = Yup.object({
     .max(50, "*Too long!")
     .required("*Required"),
   number: Yup.string()
-    .matches(
-      /^\+(?:[0-9] ?){6,14}[0-9]$|^0[1-9]\d{8}$/,
-      "*Invalid phone number"
-    )
     .min(3, "*Too short!")
     .max(50, "*Too long!")
     .required("*Required"),
