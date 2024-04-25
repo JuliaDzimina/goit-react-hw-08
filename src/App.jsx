@@ -9,35 +9,35 @@ import { nanoid } from "nanoid";
 const LS_KEY = "saved-contscts";
 
 function App() {
-  const [contacts, setContacts] = useState(() => {
-    const stringifiedContact = localStorage.getItem(LS_KEY);
-    return JSON.parse(stringifiedContact) || initialContacts;
-  });
+  // const [contacts, setContacts] = useState(() => {
+  //   const stringifiedContact = localStorage.getItem(LS_KEY);
+  //   return JSON.parse(stringifiedContact) || initialContacts;
+  // });
 
-  const [search, setSearch] = useState(" ");
+  // const [search, setSearch] = useState(" ");
 
-  useEffect(() => {
-    localStorage.setItem(LS_KEY, JSON.stringify(contacts));
-  }, [contacts]);
+  // useEffect(() => {
+  //   localStorage.setItem(LS_KEY, JSON.stringify(contacts));
+  // }, [contacts]);
 
-  const onAddContact = (formData) => {
-    const finalContacts = {
-      ...formData,
-      id: nanoid(),
-    };
+  // const onAddContact = (formData) => {
+  //   const finalContacts = {
+  //     ...formData,
+  //     id: nanoid(),
+  //   };
 
-    setContacts((prevState) => [...prevState, finalContacts]);
-  };
+  //   setContacts((prevState) => [...prevState, finalContacts]);
+  // };
 
-  const onDelete = (contactId) => {
-    setContacts((prevContacts) =>
-      prevContacts.filter((prevContact) => prevContact.id !== contactId)
-    );
-  };
+  // const onDelete = (contactId) => {
+  //   setContacts((prevContacts) =>
+  //     prevContacts.filter((prevContact) => prevContact.id !== contactId)
+  //   );
+  // };
 
-  const filteredContact = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(search.toLowerCase().trim())
-  );
+  // const filteredContact = contacts.filter((contact) =>
+  //   contact.name.toLowerCase().includes(search.toLowerCase().trim())
+  // );
 
   return (
     <div>
