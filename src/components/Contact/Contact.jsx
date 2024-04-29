@@ -1,7 +1,15 @@
 import { HiUser, HiPhone } from "react-icons/hi";
 import css from "./Contact.module.css";
+import { useDispatch } from "react-redux";
+import { deleteContact } from "../../redux/contactsSlice";
 
-const Contact = ({ name, number, id, onDelete }) => {
+const Contact = ({ name, number, id }) => {
+  const dispatch = useDispatch();
+
+  const onDelete = (userId) => {
+    dispatch(deleteContact(userId));
+  };
+
   return (
     <li className={css.wrapperContact}>
       <div className={css.contact}>
