@@ -1,0 +1,22 @@
+.wraper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wraper p {
+  color: rgb(3, 95, 87);
+}
+
+.wraper button {
+  background-color: #067575;
+  color: aliceblue;
+  margin: 0 auto;
+}
+
+.wraper button:hover {
+  background-color: rgba(4, 159, 123, 0.783);
+  border: 1px solid rgba(4, 125, 97, 0.783);
+}

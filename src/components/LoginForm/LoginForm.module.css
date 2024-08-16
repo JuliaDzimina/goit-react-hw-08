@@ -1,43 +1,41 @@
 .form {
+  border: 2px solid black;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 375px;
-  min-height: 250px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-sizing: border-box;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px;
+  width: 400px;
   margin: 0 auto;
-  padding: 10px;
-  box-shadow: 1px 1px 20px rgb(168, 165, 165);
+  margin-bottom: 20px;
 }
 
 .label {
-  font-size: 17px;
+  padding-left: 4px;
+  font-size: 18px;
 }
 
 .input {
-  width: 340px;
-  height: 25px;
-  padding-left: 5px;
+  height: 30px;
+  width: 384px;
+  border-radius: 8px;
 }
 
 .error {
-  color: red;
+  color: #d50d0d;
+  font-weight: 600;
+  margin-top: -10px;
 }
 
 .btn {
-  width: 150px;
-  font-size: 17px;
-  background-color: rgba(24, 6, 140, 0.783);
-  color: white;
-  padding: 8px;
-  margin: 10px auto;
-  box-sizing: border-box;
-  border-radius: 5px;
-  transition: background-color 0.2s ease-in-out;
+  width: 200px;
+  background-color: #067575;
+  color: aliceblue;
+  margin: 0 auto;
 }
 
 .btn:hover {
-  background-color: rgba(56, 26, 250, 0.769);
+  background-color: rgba(4, 159, 123, 0.783);
+  border: 1px solid rgba(4, 125, 97, 0.783);
 }
