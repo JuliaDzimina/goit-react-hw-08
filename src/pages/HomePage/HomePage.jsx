@@ -1,5 +1,8 @@
-import React from "react";
-
 export const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <h1> Welcome to Contacts App!</h1>
+      <p> Here, you can manage all your contacts.</p>
+    </div>
+  );
 };
