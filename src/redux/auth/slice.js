@@ -10,4 +10,4 @@ const authSlice = createSlice({
   isRefreshing: false,
 });
 
-export default authSlice.reducer;
+export const authReducer = authSlice.reducer;

@@ -3,7 +3,7 @@ import { useId } from "react";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { fetchNewContact } from "../../redux/contactsOps";
+import { fetchNewContact } from "../../redux/contacts/operations";
 
 const ContactFormShema = Yup.object({
   name: Yup.string()
