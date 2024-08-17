@@ -1,11 +1,11 @@
-//import { Suspense } from "react";
+import { Suspense } from "react";
 import AppBar from "../AppBar/AppBar";
 
 const Layout = ({ children }) => {
   return (
     <>
       <AppBar />
-      {children}
+      <Suspense fallback={null}>{children}</Suspense>
     </>
   );
 };

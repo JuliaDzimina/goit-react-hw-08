@@ -28,36 +28,31 @@ function App() {
     <Loader />
   ) : (
     <Layout>
-      <Suspense fallback={null}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/register"
-            element={
-              <RestrictedRoute
-                component={<RegistrationPage />}
-                redirectTo="/contacts"
-              />
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <RestrictedRoute
-                component={<LoginPage />}
-                redirectTo="/contacts"
-              />
-            }
-          />
-          <Route
-            path="/contacts"
-            element={
-              <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
-            }
-          />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute
+              component={<RegistrationPage />}
+              redirectTo="/contacts"
+            />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/contacts"
+          element={
+            <PrivateRoute component={<ContactsPage />} redirectTo="/login" />
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </Layout>
   );
 }
