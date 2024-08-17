@@ -3,6 +3,7 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import { useEffect } from "react";
+import css from "./ContactPage.module.css";
 
 import Loader from "../../components/Loader/Loader";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
@@ -19,7 +20,7 @@ function ContactPage() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       {error && <div>Error!</div>}

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { contactsReducer } from "./contacts/slice";
-import { filtersReducer } from "./filters/slice";
+import { contactsSliceReducer } from "./contacts/slice";
+import { filtersSliceReducer } from "./filters/slice";
 
 import {
   FLUSH,
@@ -27,11 +27,13 @@ const contactsPersistConfig = {
   whitelist: ["items"],
 };
 
+const authPersistReducer = persistReducer(authPersistConfig, authReducer);
+
 export const store = configureStore({
   reducer: {
-    contacts: persistReducer(contactsPersistConfig, contactsReducer),
-    filter: filtersReducer,
-    auth: persistReducer(authPersistConfig, authReducer),
+    contacts: persistReducer(contactsPersistConfig, contactsSliceReducer),
+    filter: filtersSliceReducer,
+    auth: authPersistReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
